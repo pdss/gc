@@ -7,6 +7,7 @@ import lombok.Data;
  * @author luotao
  * @Package com.zzl.gc.util
  * @date 2019/8/23 14:16
+ * @Description: 返回数据json生成工具类
  */
 @Data
 public class ResultVOUtil<T> {
