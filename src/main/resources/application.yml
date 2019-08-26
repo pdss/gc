@@ -19,7 +19,12 @@ spring:
       stat-view-servlet: #管理页面
         enabled: true
         url-pattern: /druid/*
+
+logging:
+  level: debug
+
 #开启驼峰
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
+
