@@ -5,8 +5,8 @@ server:
 ###微信小程序基本信息
 wxapp:
   sessionHost: https://api.weixin.qq.com/sns/jscode2session
-  appId: appid
-  secret: secret
+  appId: wxbb831fc962627c02
+  secret: 99e24a20cba0ba13752be72f83201aac
   grantType: authorization_code
 ###数据库配置
 spring:
@@ -23,7 +23,7 @@ spring:
       max-wait: 60000 #连接等待超时的时间
       time-between-eviction-runs-millis: 60000 #间隔多久才进行一次检测，检测需要关闭的空闲连接
       min-evictable-idle-time-millis: 300000 #一个连接在池中最小生存的时间
-      stat-view-servlet: #管理页面
+      stat-view-servlet: #管理页面开启
         enabled: true
         url-pattern: /druid/*
 ###mybatis开启驼峰
