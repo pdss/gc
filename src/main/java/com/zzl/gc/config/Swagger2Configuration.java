@@ -1,5 +1,6 @@
 package com.zzl.gc.config;
 
+import com.google.common.base.Predicates;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -32,7 +33,8 @@ public class Swagger2Configuration {
                 .pathMapping("/")
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.zzl.gc.controller")) //暴露接口地址的包路径
-                .paths(PathSelectors.any())
+                //.paths(Predicates.not(PathSelectors.regex("/error.*")))
+                //.paths(PathSelectors.any())
                 .build();
     }
 
