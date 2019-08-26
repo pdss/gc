@@ -3,6 +3,7 @@ package com.zzl.gc.controller;
 import com.zzl.gc.VO.ResultVO;
 import com.zzl.gc.entity.Person;
 import com.zzl.gc.mapper.PersonMapper;
+import com.zzl.gc.service.TestService;
 import com.zzl.gc.util.RedisUtil;
 import com.zzl.gc.util.ResultVOUtil;
 import io.swagger.annotations.ApiOperation;
@@ -23,9 +24,9 @@ import java.util.List;
 @RestController
 public class TestController {
     @Autowired
-    PersonMapper personMapper;
+    RedisUtil redisUtil;
     @Autowired
-    RedisTemplate redisTemplate;
+    TestService testService;
     @GetMapping("/")
     @ApiOperation(value = "测试案例",notes = "得到一些数据...")
     public ResultVO test(){
@@ -34,6 +35,7 @@ public class TestController {
          * @date 2019/8/26 11:31
          * @describe 测试案例
          */
-        return  ResultVOUtil.success(personMapper.getAll());
+        redisUtil.set("abc","1");
+        return  ResultVOUtil.success(testService.getAll());
     }
 }

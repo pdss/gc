@@ -38,8 +38,7 @@ public class WXService {
         map.put("grant_type", wxAuth.getGrantType());
         HttpConfig config = HttpConfig.custom()
                 .url(wxAuth.getSessionHost())
-                .map(map)
-                ;
+                .map(map);
         String result = HttpClientUtil.get(config);
         System.out.println(result);
         System.out.println(wxAuth);

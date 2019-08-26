@@ -10,6 +10,9 @@ wxapp:
   grantType: authorization_code
 ###数据库配置
 spring:
+  ###缓存
+  cache:
+    type: redis
   datasource:
     url: jdbc:mysql://localhost:3306/qzs
     username: root
@@ -18,12 +21,12 @@ spring:
     ###druid线程池
     druid:
       type: com.alibaba.druid.pool.DruidDataSource
-      initial-size: 2 #初始化大小
-      max-active: 20 #最大值
-      max-wait: 60000 #连接等待超时的时间
-      time-between-eviction-runs-millis: 60000 #间隔多久才进行一次检测，检测需要关闭的空闲连接
-      min-evictable-idle-time-millis: 300000 #一个连接在池中最小生存的时间
-      stat-view-servlet: #管理页面开启
+      initial-size: 2     #初始化大小
+      max-active: 20      #最大值
+      max-wait: 60000     #连接等待超时的时间
+      time-between-eviction-runs-millis: 60000  #间隔多久才进行一次检测，检测需要关闭的空闲连接
+      min-evictable-idle-time-millis: 300000    #一个连接在池中最小生存的时间
+      stat-view-servlet:  #管理页面开启
         enabled: true
         url-pattern: /druid/*
   ###redis配置
@@ -31,7 +34,7 @@ spring:
     database: 0           # Redis服务器数据库
     host: 127.0.0.1       # Redis服务器地址
     port: 6379            # Redis服务器连接端口
-    #password: root        # Redis服务器连接密码（默认为空）
+    #password: root       # Redis服务器连接密码（默认为空）
     timeout: 6000ms       # 连接超时时间（毫秒）
     jedis:
       pool:
@@ -44,3 +47,7 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true
 
+###打印sql
+logging:
+  level:
+    com.zzl.gc.mapper : debug

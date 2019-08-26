@@ -28,7 +28,7 @@ public class WXController {
     WXService wxService;
     @ApiOperation(value = "传入code获取openid",notes = "小程序用户允许登录后，使用code 换取 session_key api，将 code 换成 openid 和 session_key")
     @ApiImplicitParam(name = "code", value = "用户授权登录后回调内容时带上 ", required = true, dataType = "String")
-    @GetMapping("/wxLogin")
+    @GetMapping("/wxlogin")
     public ResultVO wxLogin(@RequestParam("code")String code) throws HttpProcessException {
         /**
          * @author luotao
