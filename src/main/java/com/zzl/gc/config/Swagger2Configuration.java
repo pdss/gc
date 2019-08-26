@@ -15,16 +15,18 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @author luotao
  * @Package com.zzl.gc.config
  * @date 2019/8/26 10:02
+ * @describe swagger2配置文件
  */
 @Configuration
 @EnableSwagger2
 public class Swagger2Configuration {
-    /**
-     * swagger2的配置文件，这里可以配置swagger2的一些基本的内容，比如扫描的包等等
-     * @return
-     */
-    @Bean
+
     public Docket createRestfulApi(){
+        /** 
+         * @author luotao
+         * @date 2019/8/26 11:29
+         * @describe swagger2的配置文件，这里可以配置swagger2的一些基本的内容，比如扫描的包等等
+         */
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .pathMapping("/")
@@ -33,11 +35,13 @@ public class Swagger2Configuration {
                 .paths(PathSelectors.any())
                 .build();
     }
-    /**
-     * 构建 api文档的详细信息函数,注意这里的注解引用的是哪个
-     * @return
-     */
+
     private ApiInfo apiInfo(){
+        /**
+         * @author luotao
+         * @date 2019/8/26 11:30
+         * @describe 构建 api文档的详细信息函数,显示在主页。
+         */
         return new ApiInfoBuilder()
                 //页面标题
                 .title("优等生源文档")

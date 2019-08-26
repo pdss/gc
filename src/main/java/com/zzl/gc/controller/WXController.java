@@ -17,9 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 import sun.net.www.http.HttpClient;
 
 /**
- * @Author: luotao
- * @CreateTime: 2019-08-25 21:39
- * @Description: 微信相关
+ * @author luotao
+ * @Package com.zzl.gc.controller
+ * @date 2019/8/26 10:02
+ * @describe 微信相关接口
  */
 @RestController
 public class WXController {

@@ -24,6 +24,13 @@ public class WXService {
     @Autowired
     WXAuth wxAuth;
     public WXSessionModel getWxSession(String code) throws HttpProcessException {
+        /**
+         * @author luotao
+         * @date 2019/8/26 11:35
+         * @param code 前端传入的code
+         * @return com.zzl.gc.DTO.WXSessionModel
+         * @describe 通过code发送get请求获取openid和session_key
+         */
         Map<String,Object> map = new HashMap<>();
         map.put("appid", wxAuth.getAppId());
         map.put("secret", wxAuth.getSecret());

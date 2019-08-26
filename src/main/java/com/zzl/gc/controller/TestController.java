@@ -12,7 +12,8 @@ import java.util.List;
 /**
  * @author luotao
  * @Package com.zzl.gc.controller
- * @date 2019/8/23 11:21
+ * @date 2019/8/26 10:02
+ * @describe 测试案例
  */
 @RestController
 public class TestController {
@@ -21,6 +22,11 @@ public class TestController {
     @GetMapping("/")
     @ApiOperation(value = "测试案例",notes = "得到一些数据...")
     public List<Person> test(){
+        /**
+         * @author luotao
+         * @date 2019/8/26 11:31
+         * @describe 测试案例
+         */
         return personMapper.getAll();
     }
 }

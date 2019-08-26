@@ -13,6 +13,12 @@ import lombok.Data;
 public class MyException extends RuntimeException {
     private int code;
     public MyException(ErrorMessageEnum errorMessage){
+        /**
+         * @author luotao
+         * @date 2019/8/26 11:40
+         * @param errorMessage
+         * @describe 自定义异常
+         */
         super(errorMessage.getMsg());
         this.code = errorMessage.getCode();
     }
