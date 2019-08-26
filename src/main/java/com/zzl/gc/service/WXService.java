@@ -34,6 +34,8 @@ public class WXService {
                 .map(map)
                 ;
         String result = HttpClientUtil.get(config);
+        System.out.println(result);
+        System.out.println(wxAuth);
         JSONObject wxJson = JSONObject.parseObject(result);
         WXSessionModel model = JSON.toJavaObject(wxJson, WXSessionModel.class);
         return model;

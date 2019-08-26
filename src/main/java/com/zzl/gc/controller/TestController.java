@@ -2,6 +2,7 @@ package com.zzl.gc.controller;
 
 import com.zzl.gc.entity.Person;
 import com.zzl.gc.mapper.PersonMapper;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,7 @@ public class TestController {
     @Autowired
     PersonMapper personMapper;
     @GetMapping("/")
+    @ApiOperation(value = "测试案例",notes = "得到一些数据...")
     public List<Person> test(){
         return personMapper.getAll();
     }

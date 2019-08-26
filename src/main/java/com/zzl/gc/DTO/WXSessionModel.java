@@ -8,7 +8,8 @@ import lombok.Data;
  * @Description: 微信返回的sessionkey和openid
  */
 @Data
-public class WXSessionModel {
+public class
+WXSessionModel {
     private String session_key;
     private String openid;
 }
