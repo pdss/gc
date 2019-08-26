@@ -1,14 +1,21 @@
 server:
   port: 8080
   servlet:
-    context-path: /gc
+    context-path: /qzs
+###微信小程序基本信息
+wxapp:
+  sessionHost: https://api.weixin.qq.com/sns/jscode2session
+  appId: appid
+  secret: secret
+  grantType: authorization_code
+###数据库配置
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/qzs
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
-    #druid线程池
+    ###druid线程池
     druid:
       type: com.alibaba.druid.pool.DruidDataSource
       initial-size: 2 #初始化大小
@@ -19,12 +26,7 @@ spring:
       stat-view-servlet: #管理页面
         enabled: true
         url-pattern: /druid/*
-
-logging:
-  level: debug
-
-#开启驼峰
+###mybatis开启驼峰
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
-

@@ -14,7 +14,7 @@ import java.util.List;
  * @date 2019/8/23 11:21
  */
 @RestController
-public class MainController {
+public class TestController {
     @Autowired
     PersonMapper personMapper;
     @GetMapping("/")

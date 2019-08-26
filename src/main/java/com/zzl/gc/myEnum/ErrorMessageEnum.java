@@ -6,7 +6,7 @@ import lombok.Getter;
  * @author luotao
  * @Package com.zzl.gc.myEnum
  * @date 2019/8/23 14:02
- * 错误信息枚举类
+ * @Description: 错误类型枚举
  */
 @Getter
 public enum  ErrorMessageEnum {

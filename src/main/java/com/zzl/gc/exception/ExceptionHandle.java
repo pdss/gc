@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author luotao
  * @Package com.zzl.gc.exception
  * @date 2019/8/23 14:22
- * 异常捕获和处理类
+ * @Description: 异常拦截处理器
  */
 @ControllerAdvice
 @Slf4j
