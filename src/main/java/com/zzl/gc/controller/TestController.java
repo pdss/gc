@@ -1,19 +1,13 @@
 package com.zzl.gc.controller;
 
 import com.zzl.gc.VO.ResultVO;
-import com.zzl.gc.entity.Person;
-import com.zzl.gc.mapper.PersonMapper;
 import com.zzl.gc.service.TestService;
 import com.zzl.gc.util.RedisUtil;
 import com.zzl.gc.util.ResultVOUtil;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 /**
  * @author luotao
