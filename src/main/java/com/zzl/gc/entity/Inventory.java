@@ -8,7 +8,7 @@ import lombok.Data;
  * @date 2019/8/23 11:08
  */
 @Data
-public class Inventory {
+public class  Inventory {
     private int countId;// 库存记录id
     private int pId;// mini馆编号
     private int bId;// 图书编号

@@ -16,5 +16,5 @@ public class Person implements Serializable {
     private String personNickname;// 昵称
     private String personPassword;// 密码
     private String personPhone;// 电话
-    private String personSex;// 性别
+    private int personSex;// 性别
 }

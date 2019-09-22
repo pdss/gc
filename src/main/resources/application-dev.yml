@@ -21,9 +21,9 @@ spring:
   cache:
     type: redis
   datasource:
-    url: jdbc:mysql://localhost:3306/qzs
+    url: jdbc:mysql://117.78.11.19:3306/lt
     username: root
-    password: root
+    password: 88TOYOUmt
     driver-class-name: com.mysql.jdbc.Driver
     ###druid线程池
     druid:
